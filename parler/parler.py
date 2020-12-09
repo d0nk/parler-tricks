@@ -20,6 +20,7 @@ from parler.notification import NotificationAPI
 from parler.parler_data import ParlerDataAPI
 from parler.parler_video import ParlerVideoAPI
 from parler.posts import PostsAPI
+from parler.promoter_campaign_management import PromoterCampaignManagementAPI
 from parler.search import SearchAPI
 from parler.settings import SettingsAPI
 from parler.tipping import TippingAPI
@@ -49,7 +50,7 @@ class Parler:
         self.authentication_api = AuthenticationAPI(session, root_url)
         self.v2_authentication_api = V2AuthenticationAPI(session, root_url)
         self.campaign_management_api = CampaignManagementAPI(session, root_url)
-        self.campaign_promoter_management_api = CampaignManagementPromoterAPI(session, root_url)
+        self.campaign_management_promoter_api = CampaignManagementPromoterAPI(session, root_url)
         self.comments_api = CommentsAPI(session, root_url)
         self.contacts_uploader_api = ContactsUploaderAPI(session, root_url)
         self.content_moderation_api = ContentModerationAPI(session, root_url)
@@ -68,6 +69,7 @@ class Parler:
         self.parler_data_api = ParlerDataAPI(session, root_url)
         self.parler_video_api = ParlerVideoAPI(session, root_url)
         self.posts_api = PostsAPI(session, root_url)
+        self.promoter_campaign_management = PromoterCampaignManagementAPI(session, root_url)
         self.search_api = SearchAPI(session, root_url)
         self.settings_api = SettingsAPI(session, root_url)
         self.tipping_api = TippingAPI(session, root_url)
